@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05752583-e5a4-4af9-a956-167ed028cb0c" name="Changes" comment="feature: create Extra class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="05752583-e5a4-4af9-a956-167ed028cb0c" name="Changes" comment="feature: add constructor in Extra class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729034287789</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feature: add constructor in Extra class">
+      <option name="closed" value="true" />
+      <created>1729034915558</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729034915558</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feature: add constructor in Extra class">
+      <option name="closed" value="true" />
+      <created>1729034931529</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729034931529</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +170,7 @@
     <MESSAGE value="feature: create Customer class" />
     <MESSAGE value="feature: create enum classes" />
     <MESSAGE value="feature: create Extra class" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: create Extra class" />
+    <MESSAGE value="feature: add constructor in Extra class" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: add constructor in Extra class" />
   </component>
 </project>
