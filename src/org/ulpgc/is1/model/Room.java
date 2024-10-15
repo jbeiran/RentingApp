@@ -4,4 +4,5 @@ public class Room {
     public String name;
     public int capacity;
     public int dayPrice;
+    public RoomType type;
 }
