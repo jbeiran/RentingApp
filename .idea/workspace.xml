@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05752583-e5a4-4af9-a956-167ed028cb0c" name="Changes" comment="feature: create enum classes">
-      <change afterPath="$PROJECT_DIR$/src/org/ulpgc/is1/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="05752583-e5a4-4af9-a956-167ed028cb0c" name="Changes" comment="feature: add constructor in Extra class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,33 +13,33 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jbeiran"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jbeiran&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jbeiran/RentingApp.git",
-    "accountId": "ef2d2a19-53b6-4e47-a01c-361cffd9c535"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jbeiran/RentingApp.git&quot;,
+    &quot;accountId&quot;: &quot;ef2d2a19-53b6-4e47-a01c-361cffd9c535&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2nUb6Gxh8u0kzPhOkQxyGlq7LS6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,7 +50,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/inheritance-Extra-class",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -129,7 +126,39 @@
       <option name="project" value="LOCAL" />
       <updated>1729033226530</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feature: create Extra class">
+      <option name="closed" value="true" />
+      <created>1729034277581</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729034277581</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feature: create Extra class">
+      <option name="closed" value="true" />
+      <created>1729034287789</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729034287789</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feature: add constructor in Extra class">
+      <option name="closed" value="true" />
+      <created>1729034915558</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729034915558</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feature: add constructor in Extra class">
+      <option name="closed" value="true" />
+      <created>1729034931529</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729034931529</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +169,8 @@
     <MESSAGE value="feature: create Room class" />
     <MESSAGE value="feature: create Customer class" />
     <MESSAGE value="feature: create enum classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: create enum classes" />
+    <MESSAGE value="feature: create Extra class" />
+    <MESSAGE value="feature: add constructor in Extra class" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: add constructor in Extra class" />
   </component>
 </project>
