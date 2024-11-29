@@ -9,13 +9,13 @@ public class Room {
     private RoomType type;
     private final List<Renting> rentings = new ArrayList<>();
 
+
     public Room(String name, int capacity, int dayPrice, RoomType type) {
         this.name = name;
         this.capacity = capacity;
         this.dayPrice = dayPrice;
         this.type = type;
     }
-
 
     public String getName() {
         return name;
@@ -33,16 +33,11 @@ public class Room {
         return type;
     }
 
-    public List<Renting> getRentings() {
-        return rentings;
+    public void addRent(Renting renting) {
+        rentings.add(renting);
     }
 
-    public boolean addRent(Renting rent){
-        if(rentings.contains(rent)){
-            return false;
-        }else{
-            rentings.add(rent);
-            return true;
-        }
+    public List<Renting> getRentings() {
+        return new ArrayList<>(rentings);
     }
 }

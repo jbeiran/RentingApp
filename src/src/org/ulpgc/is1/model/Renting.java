@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class Renting {
-
     private static int nextId = 0;
     private final int id;
     private LocalDate date;
@@ -28,7 +27,6 @@ public class Renting {
         }
 
     }
-
 
     public int price(Room room, LocalDate from, LocalDate to, int extraDayPrice) {
         long days = ChronoUnit.DAYS.between(from, to);

@@ -7,45 +7,110 @@ import src.org.ulpgc.is1.model.*;
 public class Main {
     public static void main(String[] args) {
         RentingManager rentingManager = new RentingManager();
-
-
-        Customer customer1 = new Customer("Adrian", "Mendez", CustomerType.Basic);
-        rentingManager.addCustomer(customer1);
-        rentingManager.addCustomer(customer1);
-        Customer customer2 = new Customer("Pablo", "Garcia", CustomerType.Gold);
-        rentingManager.addCustomer(customer2);
-
-
-        Room room1 = new Room("Sala mortal", 6, 13, RoomType.Showroom);
-        rentingManager.addRoom(room1);
-        rentingManager.addRoom(room1);
-        Room room2 = new Room("Classic", 4, 20, RoomType.MeetingRoom);
-        rentingManager.addRoom(room2);
-
-        Equipment toallas = new Equipment(5, "toallas");
-        rentingManager.addEquiment(toallas);
-        rentingManager.addEquiment(toallas);
-
-        rentingManager.rent(room2, customer1, null, "2024-10-19", "2024-10-20", "2024-10-26", "2024-10-19");
-        rentingManager.rent(room2, customer2, toallas, "2024-10-30", "2024-11-05", "2024-11-10", "2024-11-01");
-
-        System.out.print("\n\nAlquileres de: " + room2.getName() + "\n");
-        System.out.print("\n******************************************************************\n" +
-                "*) Datos de la sala: \n" + " <->  Nombre: " + room2.getName() +
-                "\n" + " <->  Capacidad: " + room2.getCapacity() + "\n <->  Tipo:"
-                + room2.getType() + "\n <->  Precio por día: " + room2.getDayPrice() +
-                " euros.\n" + "--------------------------------------------------------------------\n\n");
-        for(Renting rent: room2.getRentings()) {
-
-            System.out.print("\n/////////////////////////////////////////////////////////////////\n" +
-                    "Alquiler--> " + rent.getId() +
-                    "\n/////////////////////////////////////////////////////////////////\n*) Atributos del alquiler: \n" +
-                    "  *  Día en el que se realizó: " + rent.getDate() + "\n  *  Día de entrada:"
-                    + rent.getFrom() + "\n  *  Día de salida: " + rent.getTo() + "\n  * Precio del alquiler: " + rent.getPayment().getPrice() +
-                    "\n  * Pago de " + rent.getPayment().getPrice() + " euros el " + rent.getPayment().getDate() +
-                    "\n  * Persona que realizó la reserva: " + rent.getCustomer().getName() + " [ Cliente tipo " + rent.getCustomer().getType() + " ]" +
-                    "\n--------------------------------------------------------------------\n\n");
-        }
+        initializeData(rentingManager);
+        displayRoomRentings(rentingManager.getRoom(0));
     }
 
+    private static void initializeData(RentingManager rentingManager) {
+        // Inicialización de clientes
+        initializeCustomers(rentingManager);
+        // Inicialización de salas
+        initializeRooms(rentingManager);
+        // Inicialización de equipamiento
+        initializeEquipment(rentingManager);
+        // Creación de alquileres
+        createRentings(rentingManager);
+    }
+
+    private static void initializeCustomers(RentingManager rentingManager) {
+        rentingManager.addCustomer("Adrian", "Mendez", CustomerType.Basic);
+        rentingManager.addCustomer("Pablo", "Garcia", CustomerType.Gold);
+    }
+
+    private static void initializeRooms(RentingManager rentingManager) {
+        rentingManager.addRoom("Sala mortal", 6, 13, RoomType.Showroom);
+        rentingManager.addRoom("Classic", 4, 20, RoomType.MeetingRoom);
+    }
+
+    private static void initializeEquipment(RentingManager rentingManager) {
+        rentingManager.addEquiment(5, "toallas");
+        rentingManager.addEquiment(10, "microfonos");
+    }
+
+    private static void createRentings(RentingManager rentingManager) {
+        rentingManager.rent(
+            rentingManager.getRoom(1),
+            rentingManager.getCustomer(0),
+            null,
+            "2024-10-19",
+            "2024-10-20",
+            "2024-10-26",
+            "2024-10-19"
+        );
+
+        rentingManager.rent(
+            rentingManager.getRoom(0),
+            rentingManager.getCustomer(1),
+            rentingManager.getEquiment(1),
+            "2024-10-30",
+            "2024-11-05",
+            "2024-11-10",
+            "2024-11-01"
+        );
+    }
+
+    private static void displayRoomRentings(Room room) {
+        System.out.println("\n\nAlquileres de: " + room.getName());
+        displayRoomDetails(room);
+        displayRentings(room);
+    }
+
+    private static void displayRoomDetails(Room room) {
+        System.out.printf("""
+            
+            ******************************************************************
+            *) Datos de la sala:
+             <->  Nombre: %s
+             <->  Capacidad: %d
+             <->  Tipo: %s
+             <->  Precio por día: %d euros.
+            --------------------------------------------------------------------
+            
+            """,
+            room.getName(),
+            room.getCapacity(),
+            room.getType(),
+            room.getDayPrice()
+        );
+    }
+
+    private static void displayRentings(Room room) {
+        for (Renting rent : room.getRentings()) {
+            System.out.printf("""
+                
+                /////////////////////////////////////////////////////////////////
+                Alquiler--> %d
+                /////////////////////////////////////////////////////////////////
+                *) Atributos del alquiler:
+                  *  Día en el que se realizó: %s
+                  *  Día de entrada: %s
+                  *  Día de salida: %s
+                  *  Precio del alquiler: %d
+                  *  Pago de %d euros el %s
+                  *  Persona que realizó la reserva: %s [ Cliente tipo %s ]
+                --------------------------------------------------------------------
+                
+                """,
+                rent.getId(),
+                rent.getDate(),
+                rent.getFrom(),
+                rent.getTo(),
+                rent.getPayment().getPrice(),
+                rent.getPayment().getPrice(),
+                rent.getPayment().getDate(),
+                rent.getCustomer().getName(),
+                rent.getCustomer().getType()
+            );
+        }
+    }
 }
